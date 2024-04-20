@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercício DOM</title>
+</head>
+
+<body>
+    <ul id="lista">
+        <li>Item inicial</li>
+    </ul>
+    <button id="adicionarItem">Adicionar Item</button>
+
+    <script>
+        var lista = document.getElementById("lista");
+        var adicionarItemBtn = document.getElementById("adicionarItem");
+        var contadorItens = 1;
+
+        function adicionarNovoItem() {
+            var novoItem = document.createElement("li");
+            novoItem.textContent = "Novo Item " + contadorItens;
+            contadorItens++;
+            var botaoRemover = document.createElement("button");
+            botaoRemover.textContent = "Remover";
+            botaoRemover.addEventListener("click", function () {lista.removeChild(novoItem);});
+            novoItem.appendChild(botaoRemover);
+            lista.appendChild(novoItem);
+        }
+        adicionarItemBtn.addEventListener("click", adicionarNovoItem);
+    </script>
+</body>
+
+</html>

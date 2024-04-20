@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercício DOM</title>
+    <style>
+        #quadrado {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: all 0.5s;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="quadrado" onmouseover="moverDireita()" onmouseout="moverOriginal()"></div>
+
+    <script>
+        function moverDireita() {
+            var quadrado = document.getElementById("quadrado");
+            quadrado.style.left = "100px";
+        }
+
+        function moverOriginal() {
+            var quadrado = document.getElementById("quadrado");
+            quadrado.style.left = "0";
+        }
+    </script>
+</body>
+
+</html>

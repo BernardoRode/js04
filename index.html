@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercício DOM</title>
+</head>
+
+<body>
+    <h1 id="mensagem">Olá, Mundo!</h1>
+    <button onclick="mudarTextoECor()">Mudar Texto</button>
+
+    <script>
+
+        function mudarTextoECor() {
+            var mensagemElement = document.getElementById("mensagem");
+            mensagemElement.textContent = "Texto Alterado!";
+            mensagemElement.style.color = "blue";
+        }
+        mudarTextoBtn.addEventListener("click", mudarTextoECor);
+    </script>
+</body>
+
+</html>
+
+botaoRemover.textContent = "Remover";
+botaoRemover.addEventListener("click", function () { lista.removeChild(novoItem); });
+novoItem.appendChild(botaoRemover);
